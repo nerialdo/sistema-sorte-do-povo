@@ -18,7 +18,7 @@ import logo from '../../public/logo_sorte_do_povo.png';
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
-import { Impressao } from './impressao';
+// import { Impressao } from './impressao';
 import MovieList from '../../components/Pdf';
 import { PdfDocument } from "../../components/Movie";
 import dynamic from "next/dynamic";
