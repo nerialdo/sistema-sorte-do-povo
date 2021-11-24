@@ -1,0 +1,330 @@
+$enable-shadows: true;
+$primary: rgb(0, 19, 223);
+
+$body-color:  #414042;
+$body-bg: #ffffff;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+html,
+body {
+  background: #f1f1f1 !important;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form-signin {
+    background: rgb(119, 0, 255);
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    margin: 0 auto;
+    color: #ffffff;
+    border-radius: 10px;
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+    h1{
+      text-align: center;
+    }
+  }
+}
+
+.container{
+  width: 100%;
+  height: auto;
+}
+.navbar{
+  background: rgb(0, 140, 255) !important;
+  color: #fff !important;
+}
+.colBloco{
+  background: #ffff !important;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .colBlocoHeader{
+    width: 100%;
+    height: 50px;
+    background: #f1f1f1;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.bloco100{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  div{
+    span{
+      font-weight: bold;
+      font-size: 21px;
+    }
+  }
+}
+.listaBilhetes{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 50%;
+  height: 200px;
+  border: #414042 solid 1px;
+
+  .bilhete{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+    .bilhete-lado1{
+      width: 40%;
+      height: 200px;
+    }
+    .bilhete-lado2{
+      width: 60%;
+      height: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .bilhete-lado2-imgs{
+        margin-top: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.blocoFlexLado{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* pagina realizar sorteio */
+.contentSorteio{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  padding: 10px;
+}
+
+.colBlocoSorteioHeader{
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin-top: 10px;
+  color: #fff;
+  border-radius: 10px;
+
+  span{
+    margin: 10px;
+    font-size: 21px;
+  }
+}
+
+.colBlocoSorteio{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  .numerosSorteio{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #414042;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+
+    span{
+      font-size: 200px;
+    }
+
+    .loading1{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 103, 0, 0.98);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+/* site */
+.containerHeader{
+  background-color: black;
+}
+.logoSite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  img{
+    max-width: 150px;
+  }
+}
+.menuHeader{
+  background-color: green !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.blocoImagem{
+  margin-top: 30px;
+  
+  img{
+    width: 100%;
+  }
+}
+.blocoTxt{
+  margin-top: 30px;
+  img{
+    max-width: 100%;
+  }
+}
+
+.tituloBloco{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.tabelaSorteio{
+  width: 100%;
+  margin-bottom: 30px;
+  table{
+    width: 100%;
+  }
+
+  table, tr {
+    border: none !important
+  }
+  
+  table {
+  border-collapse: collapse;
+  margin: auto;
+  }
+  
+  th, td{
+  padding: 10px;
+  text-align: center;
+  border: none !important;
+  // width: 120px;
+  }
+
+  tr{
+    border: none !important;
+  }
+  
+  th{
+  font-weight: bold;
+  }
+  
+  
+  tr:nth-child(even) {
+  background-color: #DCEBE6;
+  }
+  
+  tr:hover:nth-child(1n + 2) {
+  background-color: #085F63;
+  color: #fff;
+  }
+
+  .thTable{
+    font-size: 14px;
+    color: #085F63;
+    text-align: left;
+  }
+  .tdlDia{
+    font-size: 13px;
+    span:first-child{
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .tdlGanhador{
+    font-size: 19px;
+    text-align: left;
+  }
+  .tdlVendedor{
+    font-size: 19px;
+    text-align: left;
+  }
+  .tdlNumero{
+    font-size: 19px;
+    text-align: left;
+  }
+  
+}
+
+.pagina{
+  padding-top: 50px;
+  padding-bottom: 100px;
+  height: 100vh;
+}
+
+.footer{
+  background-color: green !important;
+  display: flex  !important;
+  justify-content: center  !important;
+  align-items: center  !important;
+  padding: 10px  !important;
+  flex-direction: column;
+  color: #fff !important;
+}
