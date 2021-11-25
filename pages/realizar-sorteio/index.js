@@ -129,7 +129,7 @@ export default function Index() {
   async function cadastrarBilhetePremiado(dados){
     var data = format(new Date(), "yyyy-MM-dd'T'HH:mm:ss.SSSxxx")
     try {
-      console.log("Adicionando no banco")
+      console.log("Adicionando no banco", dados)
       await setDoc(doc(db, "sorteiosRealizado", dados.numeroSorteio), {
         cidade: dados.cidade,
         cpfVendendor: dados.cpfVendendor,
@@ -145,7 +145,7 @@ export default function Index() {
       });
       console.log("Adicinou no banco")
     } catch (error) {
-        console.log("error cadastro de dados do usuário", error)
+        console.log("error cadastro bilhete premiado", error)
     }
   } 
 
@@ -153,7 +153,7 @@ export default function Index() {
 
     var te = listaBilhetes.find(el => {
       // console.log('el', el)
-      var t = el.numerosBilhetes.includes('1067')
+      var t = el.numerosBilhetes.includes(num)
       console.log('ttt', t)
       return t
     })
