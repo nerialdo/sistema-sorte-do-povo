@@ -112,6 +112,22 @@ export default function Index() {
     }
   }
 
+  async function cadastrarBilhetesGerados(numero, numeros){
+    console.log('numeros', numero, numeros)
+    try {
+      
+      await setDoc(doc(db, "bilhetes", numero.toString()), {
+          ate: 2500,
+          numero: numero,
+          numeros: numeros,
+          dataCadastro: Timestamp.fromDate(new Date()),
+      });
+      console.log("Adicinou no banco")
+    } catch (error) {
+        console.log("erro ao cadastrar bilhete", error, error.response)
+    }
+  }
+
   function gerarBilhete(){
     var qto = parseInt(watch("qtobilhete"))
     var arrayBilhetes = []
@@ -130,6 +146,7 @@ export default function Index() {
       }
       console.log("Gerou 5", arrayNumerosBilhetes[4])
       setValue('inicioNumeros', arrayNumerosBilhetes[4])
+      cadastrarBilhetesGerados(inicial, arrayNumerosBilhetes)
       arrayBilhetes.push(
         {
           'numero' : inicial, 

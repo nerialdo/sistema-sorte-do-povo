@@ -45,6 +45,7 @@ const Header = (props) => {
                         <Nav className="justify-content-end flex-grow-1 pe-3">
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="/gerar-bilhetes">Gerar bilhetes</Nav.Link>
+                        <Nav.Link href="/cadastrar-bilhete-vendido">Cadastrar venda</Nav.Link>
                         <Nav.Link href="/vendedores">Vendedores</Nav.Link>
                         <Nav.Link href="/sorteios-realizados">Sorteios realizados</Nav.Link>
                         <Nav.Link href="/bilhetes-vendidos">Bilhetes vendidos</Nav.Link>
